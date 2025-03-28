@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      database: ${spring.application.name}
+  application:
+    name: imc-logs-management
+
+server:
+  servlet:
+    context-path: /api/v1
+
+
