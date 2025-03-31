@@ -2,11 +2,17 @@ spring:
   data:
     mongodb:
       database: ${spring.application.name}
+      username: mongo
+      password: mongo
+      authentication-database: admin
   application:
     name: imc-logs-management
 
 server:
   servlet:
     context-path: /api/v1
+logging:
+  file:
+    name: ./logs/${spring.application.name}.log
 
 

@@ -1,10 +1,12 @@
 package com.be.imc_logs_management.data;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @AllArgsConstructor
 @Service
 public class DataService {
@@ -15,6 +17,7 @@ public class DataService {
     }
 
     public Data calculate(Data data) {
+        log.info("Calculate data");
         return this.dataRepository.save(data);
     }
 
