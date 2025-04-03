@@ -1,5 +1,8 @@
 auth_enabled: false
 
+common:
+  path_prefix: /tmp/loki
+
 limits_config:
   allow_structured_metadata: true
 
@@ -28,7 +31,7 @@ schema_config:
         period: 24h
 
 storage_config:
-  boltdb_shipper:
+  tsdb_shipper:
     active_index_directory: /tmp/loki/index
     cache_location: /tmp/loki/index_cache
   filesystem:
